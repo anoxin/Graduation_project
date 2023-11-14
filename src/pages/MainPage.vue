@@ -7,7 +7,7 @@
                 <div class="home-info__block-info">
                     <h1 class="home-info__title">Заказ конструкторской документации</h1>
                     <p class="home-info__text">Предоставляет услуги по разработке конструкторской документации (КД) по ГОСТ на заказ</p>
-                    <button class="button__black">Заказать работу<img src="@/assets/img/home-info/arrow.svg" alt="arrow"></button>
+                    <button class="button__black" @click="$emit('close', true)">Заказать работу<img src="@/assets/img/home-info/arrow.svg" alt="arrow"></button>
                 </div>
 
             </div>
@@ -148,6 +148,7 @@ export default {
   components: {
     CartDesign,
   },
+
   data() {
     return {
       carts: [
@@ -173,7 +174,14 @@ export default {
           data: "25 December,2022",
         },
       ],
+      isPopup: false,
     };
+  },
+  methods: {
+    close() {
+      this.isPopup = !this.isPopup;
+      return this.isPopup;
+    },
   },
 };
 </script>

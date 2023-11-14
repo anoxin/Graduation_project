@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <HeaderContent />
-    <router-view />
-    <!-- <MainPage /> -->
+    <router-view v-on:close="isPopup = true" />
+    <!-- <MainPage  /> -->
     <!-- <BlogPage /> -->
     <!-- <BlogDetailsPage /> -->
     <!-- <OurProject /> -->
     <!-- <ProjectDetails /> -->
     <FooterContent />
-    <ModalWindow v-if="isPopup"/>
+    <ModalWindow v-if="isPopup" v-on:close="close($event)" />
   </div>
 </template>
 
@@ -27,25 +27,24 @@ export default {
   components: {
     HeaderContent,
     FooterContent,
-    ModalWindow
+    ModalWindow,
     // MainPage,
     // BlogPage,
     // BlogDetailsPage,
     // OurProject,
     // ProjectDetails,
   },
-  data () {
-		return {
-			isPopup: true
-		}
-
-	},
-
-    methods: {
-        close() {
-            this.isPopup=!this.isPopup;
-        },
+  data() {
+    return {
+      isPopup: false,
+    };
+  },
+  methods: {
+    close(info) {
+      this.isPopup = info;
+      return this.isPopup;
     },
+  },
 };
 </script>
 
