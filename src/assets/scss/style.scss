@@ -1,0 +1,12 @@
+// Подключение переменных
+@import 'variables';
+//  Подключение базовых настроек
+@import 'settings';
+//  Подключение блока main
+@import './blocks/main';
+//  Подключение блока blog
+@import './blocks/blog';
+//  Подключение блока blog-details
+@import './blocks/blog-details';
+//  Подключение media
+@import 'media'
