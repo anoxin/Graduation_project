@@ -15,7 +15,7 @@
               </h2>
               <div class="cart-design-bottom cart-design__bottom">
                 <span class="cart-design__date">{{ cart.data }}</span>
-                <router-link to="/blog-details-page" class="cart-design__link"><img src="@/assets/img/cart-design/link.svg" alt="link"
+                <router-link to="/blog-page" class="cart-design__link"><img src="@/assets/img/cart-design/link.svg" alt="link"
                 /></router-link>
               </div>
             </div>

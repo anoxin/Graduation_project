@@ -3,8 +3,8 @@
     <div class="container error__wrapper">
       <div class="error__info">
     <h2 class="error__title">404</h2>
-    <p class="error__text">We are sorry, but the page you requested was not found</p>
-    <router-link to="/" class="button__black">Back To Home <img src="@/assets/img/home-info/arrow.svg" alt="arrow"></router-link>
+    <p class="error__text">Приносим извинения, но запрошенная вами страница не была найдена</p>
+    <router-link to="/" class="button__black">Вернутся на главную <img src="@/assets/img/main-info/arrow.svg" alt="arrow"></router-link>
       </div>
     <div class="error__bg"></div>
     </div>
@@ -40,6 +40,24 @@ export default {};
     width: 100%;
     background: url(@/assets/img/error/bg.jpg) center / cover no-repeat;
     border-radius: 0px 0px 0px 353px;
+  }
+}
+
+@media (max-width: 767px) {
+  .error__bg {
+    display: none;
+  }
+
+  .error__info {
+    display: block;
+  }
+  .error__title {
+    font-size: 150px;
+    text-align: center;
+  }
+  .error__text {
+    font-size: 25px;
+    text-align: center;
   }
 }
 </style>

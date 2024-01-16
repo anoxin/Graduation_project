@@ -4,18 +4,15 @@
         <div class="container">
             <div class="footer__wrapper">
                 <div class="footer__about">
+                  <router-link to="/" class="link-logo">
                     <div class="logo">
                         <img class="logo__img" src="@/assets/img/logo/Logo.png" alt="logo">
                         <span class="logo__text">Конструктор</span>
                     </div>
+                  </router-link>
                     <p class="footer__about-info">
                         Предоставляет услуги по разработке конструкторской документации (КД) по ГОСТ на заказ
                     </p>
-                    <div class="footer__about-social-network">
-                        <a href="#" class="footer__link-network"><img src="@/assets/img/footer/twitter.svg" alt="twitter"></a>
-                        <a href="#" class="footer__link-network"><img src="@/assets/img/footer/instagram.svg"
-                                alt="instagram"></a>
-                    </div>
 
                 </div>
                 <div class="footer__pages">
@@ -51,6 +48,7 @@ $text-color: #292f36;
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    gap: 15px;
   }
 
   &__about {
@@ -104,6 +102,14 @@ $text-color: #292f36;
     font-size: 22px;
     line-height: 150%;
     margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .footer__wrapper {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 50px;
   }
 }
 </style>

@@ -2,25 +2,15 @@
   <div id="app">
     <HeaderContent />
     <router-view v-on:close="isPopup = true" />
-    <!-- <MainPage  /> -->
-    <!-- <BlogPage /> -->
-    <!-- <BlogDetailsPage /> -->
-    <!-- <OurProject /> -->
-    <!-- <ProjectDetails /> -->
     <FooterContent />
     <ModalWindow v-if="isPopup" v-on:close="close($event)" />
   </div>
 </template>
 
 <script>
-// import MainPage from "./pages/MainPage.vue";
-// import BlogPage from "./pages/BlogPage.vue";
 import HeaderContent from "@/components/HeaderContent.vue";
 import FooterContent from "@/components/FooterContent.vue";
 import ModalWindow from "@/components/ModalWindow.vue";
-// import BlogDetailsPage from "./pages/BlogDetailsPage.vue";
-// import OurProject from "@/pages/OurProject.vue";
-// import ProjectDetails from "@/pages/ProjectDetails.vue";
 
 export default {
   name: "App",
@@ -28,11 +18,6 @@ export default {
     HeaderContent,
     FooterContent,
     ModalWindow,
-    // MainPage,
-    // BlogPage,
-    // BlogDetailsPage,
-    // OurProject,
-    // ProjectDetails,
   },
   data() {
     return {
@@ -160,21 +145,6 @@ body {
   margin: 0 auto;
 }
 
-.logo {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  margin-left: 10px;
-
-  &__img {
-    width: 70px;
-  }
-
-  &__text {
-    font-size: 40px;
-  }
-}
-
 // cart-design
 .cart-design {
   width: 340px;
@@ -244,6 +214,10 @@ body {
   }
 }
 
+.link-logo {
+  color: #292f36;
+}
+
 .breadcrumb {
   &__items {
     display: flex;
@@ -263,6 +237,18 @@ body {
 
   &__link {
     color: inherit;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 734px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
   }
 }
 </style>

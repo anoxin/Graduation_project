@@ -1,13 +1,13 @@
 <template lang="en">
   <div>
        
-    <section class="home-info">
+    <section class="main-info">
         <div class="container">
-            <div class="home-info__wrapper">
-                <div class="home-info__block-info">
-                    <h1 class="home-info__title">Заказ конструкторской документации</h1>
-                    <p class="home-info__text">Предоставляет услуги по разработке конструкторской документации (КД) по ГОСТ на заказ</p>
-                    <button class="button__black" @click="$emit('close', true)">Заказать работу<img src="@/assets/img/home-info/arrow.svg" alt="arrow"></button>
+            <div class="main-info__wrapper">
+                <div class="main-info__block-info">
+                    <h1 class="main-info__title">Заказ конструкторской документации</h1>
+                    <p class="main-info__text">Предоставляет услуги по разработке конструкторской документации (КД) по ГОСТ на заказ</p>
+                    <button class="button__black" @click="$emit('close', true)">Заказать работу<img src="@/assets/img/main-info/arrow.svg" alt="arrow"></button>
                 </div>
 
             </div>
@@ -29,7 +29,7 @@
                             <h3 class="cart__title">Чертежи</h3>
                             <p class="cart__text-info">Decor / Artchitecture</p>
                         </div>
-                         <router-link to="/blog-details-page" class="cart__link"
+                         <router-link to="/our-project" class="cart__link"
                 ><img src="@/assets/img/projects/link.svg" alt="link"></router-link>
 
                     </div>
@@ -45,7 +45,7 @@
                             <h3 class="cart__title">Модели</h3>
                             <p class="cart__text-info">Decor / Artchitecture</p>
                         </div>
-                        <router-link to="/blog-details-page" class="cart__link"
+                        <router-link to="/our-project" class="cart__link"
                 ><img src="@/assets/img/projects/link.svg" alt="link"></router-link>
 
                     </div>
@@ -61,7 +61,7 @@
                             <h3 class="cart__title">Развертки</h3>
                             <p class="cart__text-info">Decor / Artchitecture</p>
                         </div>
-                        <router-link to="/blog-details-page" class="cart__link"
+                        <router-link to="/our-project" class="cart__link"
                 ><img src="@/assets/img/projects/link.svg" alt="link"></router-link>
 
                     </div>
@@ -77,10 +77,8 @@
                             <h3 class="cart__title">Замеры деталей</h3>
                             <p class="cart__text-info">Decor / Artchitecture</p>
                         </div>
-                        <a href="#" class="cart__link"><img src="@/assets/img/projects/link.svg" alt="link"></a>
-                        <router-link to="/blog-details-page" class="cart-design__link"
-                ><img src="@/assets/img/cart-design/link.svg" alt="link"
-              /></router-link>
+                         <router-link to="/our-project" class="cart__link"
+                ><img src="@/assets/img/projects/link.svg" alt="link"></router-link>
 
                     </div>
 
@@ -189,12 +187,12 @@ export default {
 $jost: "Jost", sans-serif;
 $text-color: #292f36;
 
-.home-info {
+.main-info {
   &__wrapper {
     display: flex;
     align-items: center;
     padding: 30px;
-    background: url(@/assets/img/home-info/Images.jpeg) center center/ cover
+    background: url(@/assets/img/main-info/Images.jpeg) center center/ cover
       no-repeat;
     height: 758px;
     border-radius: 70px;
@@ -388,6 +386,91 @@ $text-color: #292f36;
 
   &__img {
     width: 350px;
+  }
+}
+@media (max-width: 1024px) {
+  .projects__carts {
+    justify-content: center;
+  }
+  .articles__carts {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  .finished-parts__images {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-info__title {
+    font-size: 35px;
+  }
+  .main-info__text {
+    font-size: 18px;
+  }
+
+  .projects__carts {
+    justify-content: center;
+  }
+
+  .advantages__text {
+    text-align: center;
+    color: #4d5053;
+    font-family: "Jost", sans-serif;
+    font-size: 18px;
+  }
+
+  .advantages__number {
+    font-size: 50px;
+  }
+
+  .cart-design {
+    width: 300px;
+  }
+  .finished-parts__images {
+    justify-content: center;
+  }
+
+  .footer__wrapper {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .cart {
+    height: fit-content;
+  }
+  .cart__img-block {
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+  }
+  .projects__title {
+    font-size: 35px;
+  }
+  .articles__title {
+    font-size: 35px;
+  }
+  .finished-parts__title {
+    font-size: 35px;
+  }
+}
+@media (max-width: 424px) {
+  .main-info__title {
+    font-size: 20px;
+  }
+  .main-info__text {
+    font-size: 15px;
+  }
+  .button__black {
+    display: flex;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+  .main-info__wrapper {
+    height: 370px;
   }
 }
 </style>

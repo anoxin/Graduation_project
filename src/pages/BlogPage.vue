@@ -1,17 +1,17 @@
 <template lang="">
   <div>
-    <section class="blog">
+    <section class="blog blog-articles">
       <div class="container blog__content">
         <div class="blog__wrapper">
-          <h1 class="blog__title">Articles & News</h1>
+          <h1 class="blog__title">Статьи</h1>
           <nav class="breadcrumb">
             <ul class="breadcrumb__items">
               <li class="breadcrumb__list">
-                <router-link to="/" class="breadcrumb__link">Home</router-link>
+                <router-link to="/" class="breadcrumb__link">Главная</router-link>
               </li>
               <li class="breadcrumb__list">
                 <router-link to="/blog-page" class="breadcrumb__link"
-                  >Blog</router-link
+                  >Статьи</router-link
                 >
               </li>
             </ul>
@@ -19,114 +19,42 @@
         </div>
       </div>
     </section>
+            <section class="latest-post">
+          <div class="container">
+            <h2 class="latest-post__title">Конструкторские разработки</h2>
+            <div class="latest-post__cart">
+              <img src="@/assets/img/blog/cart.jpg" alt="design" class="latest-post__cart-img" />
+              <h3 class="latest-post__cart-title">
+                Роль научно-исследовательских и опытно-конструкторских работ в России
+              </h3>
+              <p class="latest-post__cart-text">
+                Многие предприятия сосредоточили свое внимание на научно-исследовательских и опытно-конструкторских
+                работах (НИОКР) и именно от результатов исследования и зависят ключевые решения по развитию бизнеса.
 
-    <section class="latest-post">
-      <div class="container">
-        <h2 class="latest-post__title">Latest Post</h2>
-        <div class="latest-post__cart">
-          <img
-            src="@/assets/img/blog/cart.jpg"
-            alt="design"
-            class="latest-post__cart-img"
-          />
-          <div class="latest-post__cart-info">
-            <h3 class="latest-post__cart-title">
-              Low Cost Latest Invented Interior Designing Ideas
-            </h3>
-            <p class="latest-post__cart-text">
-              Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis
-              dignissim maximus.posuere in.Contrary to popular belief
-            </p>
-            <p class="latest-post__cart-text">
-              Lorem Ipsum is not simply random text. It has roots in a piece of
-              classica.
-            </p>
-            <div class="cart-design-bottom latest-post__top">
-              <span class="cart-design__date">26 December,2022 </span>
-              <router-link to="/blog-details-page" class="cart-design__link"
-                ><img src="@/assets/img/cart-design/link.svg" alt="link"
-              /></router-link>
+                Понимая необходимость продвижения инновационных технологий и идей, в значительной мере было усилено
+                финансовое обеспечение.
+
+                Как можно увидеть, до кризиса 2009 года средства активно вкладывались в НИОКР, однако в тяжелой
+                экономической ситуации произошли вынужденные сокращения расходов. Тем не менее, несмотря даже на
+                докризисный показатели, Россия имела самый низкий уровень финансирования.
+
+                Ситуация смягчалась активной модернизацией и повышением эффективности, однако сейчас вопросы о
+                приоритете
+                научно-исследовательских и опытно-конструкторских работах звучат все чаще.
+
+                Тем не менее, эксперты заявляют, что развитие этой сферы произойдет не раньше, чем наступит
+                экономическая
+                стабильность
+              </p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section class="article-news">
-      <div class="container">
-        <h2 class="article-news__title">Latest Post</h2>
-        <div id="article-news-card" class="article-news__wrapper">
-          <CartDesign v-for="cart in carts" :key="cart.id" :cart="cart" />
-        </div>
-        <div class="pagination">
-          <a href="#" class="pagination__item">01</a>
-          <a href="#" class="pagination__item">02</a>
-          <a href="#" class="pagination__item">03</a>
-          <a href="#" class="pagination__item">
-            <img src="@/assets/img/cart-design/link.svg" alt="link" />
-          </a>
-        </div>
-      </div>
-    </section>
+
   </div>
 </template>
 <script>
-import CartDesign from "@/components/CartDesign.vue";
-
-export default {
-  name: "BlogPage",
-  components: {
-    CartDesign,
-  },
-  data() {
-    return {
-      carts: [
-        {
-          id: 1,
-          name: "Interior Design",
-          img: require("@/assets/img/cart-design/1.jpg"),
-          text: "Best For Any Office & Business Interior Solution",
-          data: "25 December,2022",
-        },
-        {
-          id: 2,
-          name: "Interior Design",
-          img: require("@/assets/img/cart-design/2.jpg"),
-          text: "Best For Any Office & Business Interior Solution",
-          data: "25 December,2022",
-        },
-        {
-          id: 3,
-          name: "Interior Design",
-          img: require("@/assets/img/cart-design/3.jpg"),
-          text: "Best For Any Office & Business Interior Solution",
-          data: "25 December,2022",
-        },
-        {
-          id: 4,
-          name: "Interior Design",
-          img: require("@/assets/img/cart-design/1.jpg"),
-          text: "Best For Any Office & Business Interior Solution",
-          data: "25 December,2022",
-        },
-        {
-          id: 5,
-          name: "Interior Design",
-          img: require("@/assets/img/cart-design/2.jpg"),
-          text: "Best For Any Office & Business Interior Solution",
-          data: "25 December,2022",
-        },
-        {
-          id: 6,
-          name: "Interior Design",
-          img: require("@/assets/img/cart-design/3.jpg"),
-          text: "Best For Any Office & Business Interior Solution",
-          data: "25 December,2022",
-        },
-      ],
-    };
-  },
-};
+export default {};
 </script>
 <style lang="scss">
 $jost: "Jost", sans-serif;
@@ -134,7 +62,9 @@ $text-color: #292f36;
 
 .blog {
   height: 356px;
-  background: url(@/assets/img/blog/bg.jpg) center/cover no-repeat;
+  &-articles {
+    background: url(@/assets/img/blog/bg2.jpg) center/cover no-repeat;
+  }
 
   &__content {
     display: flex;
@@ -159,39 +89,38 @@ $text-color: #292f36;
 }
 
 .latest-post {
-  padding: 200px 0;
+  padding: 50px 0 100px;
 
   &__title {
     font-size: 50px;
     margin-bottom: 33px;
-  }
-
-  &__cart {
-    display: flex;
+    text-align: center;
   }
 
   &__cart-img {
     width: 569px;
     height: 478px;
     border-radius: 50px;
-  }
-
-  &__cart-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 22px;
-    padding: 65px;
+    float: left;
+    margin-right: 50px;
+    margin-bottom: 50px;
   }
 
   &__cart-title {
-    font-size: 25px;
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: black;
+    text-align: center;
+    font-family: "Jost";
+    line-height: 150%;
+    text-transform: uppercase;
   }
 
   &__cart-text {
-    color: #4d5053;
-    font-family: $jost;
+    color: #292f36;
+    font-family: "Jost";
     font-size: 22px;
+    line-height: 150%;
   }
 
   &__top {
@@ -239,6 +168,33 @@ $text-color: #292f36;
     &:hover {
       background-color: #f4f0ec;
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .latest-post__cart {
+    display: flex;
+    flex-direction: column;
+    &-img {
+      float: none;
+      align-self: center;
+      margin: 0 0 4%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .blog {
+    height: 200px;
+  }
+  .latest-post__cart {
+    &-img {
+      width: 90%;
+      height: 30%;
+    }
+  }
+  .latest-post__title {
+    font-size: 35px;
   }
 }
 </style>

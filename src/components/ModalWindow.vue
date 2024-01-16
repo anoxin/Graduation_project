@@ -5,7 +5,7 @@
             <button class="popup__close" @click="$emit('close', false)">&times;</button>
             <div class="main-form">
                 <h3 class="popup__title">Введите свои данные для связи с нами!</h3>
-                <form id="form3" name="user_form">
+                <form id="form3" name="user_form" action="send.html" method="post">
                     <div>
                         <input type="text" class="form__input" id="form3-name" name="user_name" placeholder="Ваше имя" required>
                     </div>
@@ -46,6 +46,7 @@ export default {
   height: 100vh;
   z-index: 9;
   background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
 
   &__title {
     color: #fff;
@@ -67,7 +68,10 @@ export default {
   }
 
   &__content {
-    position: fixed;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
     text-align: center;
     width: 40rem;
     padding: 2rem 6rem;
@@ -102,6 +106,13 @@ export default {
     margin-top: 20px;
     padding: 10px;
     border-radius: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .popup__content {
+    width: 90%;
+    padding: 2rem 3rem;
   }
 }
 </style>
