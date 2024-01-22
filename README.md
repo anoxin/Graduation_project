@@ -1,4 +1,4 @@
-# lesson8
+# Дипломная работа
 
 ## Project setup
 ```
