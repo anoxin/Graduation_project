@@ -5,7 +5,7 @@
             <button class="popup__close" @click="$emit('close', false)">&times;</button>
             <div class="main-form">
                 <h3 class="popup__title">Введите свои данные для связи с нами!</h3>
-                <form id="form3" name="user_form" action="send.html" method="post">
+                <form id="form3" name="user_form" action="https://formspree.io/f/xdoqkvad" method="post">
                     <div>
                         <input type="text" class="form__input" id="form3-name" name="user_name" placeholder="Ваше имя" required>
                     </div>
@@ -16,7 +16,7 @@
                         <input type="email" class="form__input" id="form3-email" name="user_email" placeholder="Ваш E-mail">
                     </div>
                     <div>
-                        <textarea class="form__text" placeholder="Введите сообщение"></textarea>
+                        <textarea class="form__text" placeholder="Введите сообщение" name="user_text"></textarea>
                     </div>
                     <button class="form__btn" type="submit">Оставить заявку!</button>
                 </form>
